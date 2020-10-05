@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id "com.google.protobuf" version "0.8.12"
+}
+
+group 'com.rms'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+protobuf {
+    generatedFilesBaseDir = "$projectDir/src"
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.google.protobuf:protobuf-java:3.11.0'
+}
